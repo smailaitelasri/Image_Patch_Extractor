@@ -76,6 +76,7 @@ If you use *Image Patch Extractor* in your research, please cite it as:
   journal      = {GitHub repository},
   howpublished = {\url{https://github.com/smailaitelasri/Image_Patch_Extractor}}
 }
+```
 
 ## License
 
