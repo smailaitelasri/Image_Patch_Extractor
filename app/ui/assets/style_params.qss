@@ -1,0 +1,175 @@
+/* ===============================
+   Light Theme – Clean & Modern
+   =============================== */
+
+/* Global */
+QWidget {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10pt;
+    background-color: #F9FAFB;   /* light background */
+    color: #1F2937;              /* dark text */
+}
+
+/* Main window panels */
+QFrame#left_panel {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+}
+
+/* Labels */
+QLabel {
+    background: transparent;
+    color: #374151;   /* neutral gray */
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #E5E7EB;
+    color: #111827;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 6px 12px;
+    min-width: 90px;
+}
+QPushButton:hover {
+    background-color: #F3F4F6;
+}
+QPushButton:pressed {
+    background-color: #D1D5DB;
+}
+QPushButton:disabled {
+    background-color: #F3F4F6;
+    color: #9CA3AF;
+    border-color: #E5E7EB;
+}
+
+/* Primary (Start) */
+QPushButton#btn_start {
+    background-color: #2563EB;  /* blue */
+    color: #FFFFFF;
+    border: none;
+}
+QPushButton#btn_start:hover {
+    background-color: #3B82F6;
+}
+QPushButton#btn_start:pressed {
+    background-color: #1D4ED8;
+}
+
+/* Danger (Cancel) */
+QPushButton#btn_cancel {
+    background-color: #DC2626;  /* red */
+    color: #FFFFFF;
+    border: none;
+}
+QPushButton#btn_cancel:hover {
+    background-color: #EF4444;
+}
+QPushButton#btn_cancel:pressed {
+    background-color: #B91C1C;
+}
+
+/* Inputs */
+QLineEdit, QSpinBox, QDoubleSpinBox, QComboBox, QTextEdit {
+    background-color: #FFFFFF;
+    color: #111827;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 5px 8px;
+}
+QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QComboBox:focus, QTextEdit:focus {
+    border: 2px solid #2563EB;  /* focus ring */
+}
+
+/* ComboBox */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 24px;
+    border-left: 1px solid #D1D5DB;
+    background: #F9FAFB;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+QComboBox QAbstractItemView {
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    selection-background-color: #DBEAFE;
+    selection-color: #1E3A8A;
+}
+
+/* CheckBox */
+QCheckBox::indicator {
+    width: 16px; height: 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+QCheckBox::indicator:checked {
+    background-color: #2563EB;
+    image: url(app/ui/assets/check_white.svg);
+    border-color: #2563EB;
+}
+
+/* ProgressBar */
+QProgressBar {
+    background: #F3F4F6;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    color: #111827;
+    text-align: center;
+    height: 14px;
+}
+QProgressBar::chunk {
+    background-color: #2563EB;
+    border-radius: 6px;
+}
+
+/* Tabs */
+QTabWidget::pane {
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    background: #FFFFFF;
+}
+QTabBar::tab {
+    padding: 6px 12px;
+    margin: 2px;
+    color: #6B7280;
+    background: #F3F4F6;
+    border: 1px solid #D1D5DB;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+QTabBar::tab:selected {
+    color: #111827;
+    background: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+}
+
+/* ScrollBars */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+}
+QScrollBar::handle:vertical {
+    background: #D1D5DB;
+    border-radius: 5px;
+    min-height: 20px;
+}
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+}
+QScrollBar::handle:horizontal {
+    background: #D1D5DB;
+    border-radius: 5px;
+    min-width: 20px;
+}
+
+/* GraphicsView */
+QGraphicsView {
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+}

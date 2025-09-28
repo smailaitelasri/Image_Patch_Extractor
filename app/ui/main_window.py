@@ -6,6 +6,16 @@ for configuring and running the patch extraction process.
 import os
 import sys
 
+from app.domain.config_model import AppConfig
+from app.domain.pairing import list_pairs
+from app.domain.patch_extractor import load_image, load_mask
+from app.infrastructure.settings import AppSettings
+from app.services.logging_bus import LogBus
+from app.services.runner import ExtractionRunner
+from app.ui.widgets.path_picker import PathPicker
+from app.ui.widgets.preview_view import PreviewView
+from app.ui.widgets.stats_panel import StatsPanel
+
 # =============================
 # app/ui/main_window.py
 # =============================
@@ -28,25 +38,15 @@ from PyQt5.QtWidgets import (
     QWidget,
 )
 
-from app.domain.config_model import AppConfig
-from app.domain.pairing import list_pairs
-from app.domain.patch_extractor import load_image, load_mask
-from app.infrastructure.settings import AppSettings
-from app.services.logging_bus import LogBus
-from app.services.runner import ExtractionRunner
-from app.ui.widgets.path_picker import PathPicker
-from app.ui.widgets.preview_view import PreviewView
-from app.ui.widgets.stats_panel import StatsPanel
-
 
 def load_stylesheet():
-    """Loads the QSS stylesheet from the assets folder."""
-    try:
-        with open("app/ui/assets/style.qss", "r") as f:
-            return f.read()
-    except FileNotFoundError:
-        print("Stylesheet not found.")
+    """Load the QSS stylesheet from the assets folder."""
+    qss_path = os.path.join(os.path.dirname(__file__), "assets", "style_params.qss")
+    if not os.path.exists(qss_path):
+        print(f"⚠️ Stylesheet not found at {qss_path}")
         return ""
+    with open(qss_path, "r", encoding="utf-8") as f:
+        return f.read()
 
 
 class MainWindow(QMainWindow):
