@@ -63,6 +63,20 @@ A desktop application for extracting image patches and their corresponding masks
     - Once the process is complete, the "Patch Browser" tab will be populated with the generated patches.
     - Click on any patch to see a preview of the image and its corresponding mask.
 
+## Citation
+
+If you use *Image Patch Extractor* in your research, please cite it as:
+
+```bibtex
+@misc{ImagePatchExtractor2025,
+  author       = {Smail Ait Elasri},
+  title        = {Image Patch Extractor: A PyQt5 App for Dataset Preparation},
+  year         = {2025},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{https://github.com/smailaitelasri/Image_Patch_Extractor}}
+}
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
