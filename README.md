@@ -21,8 +21,9 @@ A desktop application for extracting image patches and their corresponding masks
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd data_handler
+    git clone https://github.com/smailaitelasri/Image_Patch_Extractor.git
+    cd Image_Patch_Extractor
+
     ```
 
 2.  **Create and activate a virtual environment:**
